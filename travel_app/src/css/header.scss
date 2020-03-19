@@ -1,0 +1,14 @@
+/* ---- header logo ---- */
+
+.header__logo--style {
+    border-radius: 10px;
+    margin: 20px;
+    width: 70px;
+}
+
+/* ---- header layout ---- */
+
+.header_layout--grid {
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+}

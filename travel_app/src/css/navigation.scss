@@ -1,0 +1,17 @@
+/* ---- navigation layout ---- */
+.navigation {
+
+  &__layout {
+    &--grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    &--bar {
+      align-self: center;
+      justify-self: center;
+      width: 90px;
+    }
+  }
+}
+
