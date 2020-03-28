@@ -1,0 +1,13 @@
+/* ---- main layout ---- */
+
+.main {
+    &__layout {
+        grid-area: main;
+        display: grid;
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: 60% 40%;
+        grid-template-areas:
+            'mainTitle mainTitle'
+            'information gallery';
+    }
+}

@@ -1,0 +1,12 @@
+/* ---- navigation layout ---- */
+.navigation {
+
+  &__layout {
+
+    &--grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+}
+

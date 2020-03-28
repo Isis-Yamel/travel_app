@@ -1,15 +1,17 @@
 import Footer from '../components/footer/footer';
 import Header from '../components/header/header';
 import Main from '../components/main/main';
-import React, { Fragment } from 'react';
+import React from 'react';
+import '../css/styles/App.scss';
+import '../css/utils/normalize.css';
 
 const App = () => {
   return (
-    <Fragment>
+    <div className='app__layout app__background'>
       <Header/>
       <Main/>
       <Footer/>
-    </Fragment>
+    </div>
   );
 }
 

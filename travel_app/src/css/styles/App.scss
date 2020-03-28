@@ -1,0 +1,21 @@
+/* ---- app layout ---- */
+
+.app{
+    &__layout{
+        color: wheat;
+        display: grid;
+        grid-template-columns: 10% 80% 10%;
+        grid-template-rows: 10% 85% 5%;
+        grid-template-areas:
+            '. header .'
+            '. main .'
+            'footer footer footer';
+        height: 100vh;
+    }
+    &__background {
+        background-image: url(../../assets/background.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+}

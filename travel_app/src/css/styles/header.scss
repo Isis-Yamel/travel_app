@@ -1,0 +1,16 @@
+/* ---- header logo ---- */
+
+.header {
+    &__layout {
+        &--logo {
+            font-size: 1.5em;
+            margin: auto;
+        }
+
+        &--grid {
+            display: grid;
+            grid-area: header;
+            grid-template-columns: 0.2fr 1fr;
+        }
+    }
+}

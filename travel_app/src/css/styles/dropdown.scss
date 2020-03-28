@@ -1,0 +1,51 @@
+.dropdown {
+    &__container {
+
+        &--grid {
+            align-items: center;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            justify-self: center;
+            position: relative;
+            width: 80px;
+        }
+
+        &--style {
+            border-bottom: solid 2px orange;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: normal;
+            padding: 4px 10px;
+            width: 60px;
+
+            &:hover{
+                border-bottom: solid 2px lightseagreen;
+            }
+        }
+
+        &--icon {
+            cursor: pointer;
+            position: relative;
+            right: 12px;
+            font-size: 14px;
+        }
+    }
+
+    &__list {
+
+        &--style {
+            background-color: rgba(0, 0, 0, 0.8);
+            list-style: none;
+            padding: 0;
+            position: absolute;
+            top: 40px;
+            width: 100%;
+            z-index: 10;
+        }
+
+        &--item {
+            font-size: 0.8em;
+            padding: 6px 12px;
+        }
+    }
+}

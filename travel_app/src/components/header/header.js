@@ -1,13 +1,12 @@
-import logo from '../../assets/logo.jpg';
 import Navigation from './navigation';
 import React from 'react';
 
-import '../../css/header.scss';
+import '../../css/styles/header.scss';
 
 const Header = () => {
     return (
-        <header className='header_layout--grid'>
-            <img className='header__logo--style' src={logo} alt='website logo'/>
+        <header className='header__layout--grid'>
+            <i className="fas fa-mountain header__layout--logo"></i>
             <Navigation/>
         </header>
     );

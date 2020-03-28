@@ -1,6 +1,6 @@
 import Dropdown from '../../elements/dropdown';
 import React, { Component } from 'react';
-import '../../css/navigation.scss';
+import '../../css/styles/navigation.scss';
 
 class Navigation extends Component {
 
@@ -9,31 +9,45 @@ class Navigation extends Component {
             {
                 id: 0,
                 title: 'Berlin',
-                selected: false,
-                key: 'location'
+                selected: false
             },
             {
                 id: 1,
                 title: 'Bogota',
-                selected: false,
-                key: 'location'
+                selected: false
+            },
+            {
+                id: 2,
+                title: 'Oslo',
+                selected: false
+            }
+        ],
+        languages: [
+            {
+                id: '1a',
+                title: 'Spanish',
+                selected: false
+            },
+            {
+                id: '1b',
+                title: 'English',
+                selected: false
             }
         ]
     };
 
     render () {
         return (
-            <div className='navigation__layout--grid'>
+            <section className='navigation__layout--grid'>
                 <Dropdown
-                    title='Cities'
+                    title='cities'
                     list={this.state.cities}
                 />
-                <button className='navigation__layout--bar'>SigIn</button>
-                <select className='navigation__layout--bar' name='language'>
-                    <option>spanish</option>
-                    <option>english</option>
-                </select>
-            </div>
+                <Dropdown
+                    title='lang'
+                    list={this.state.languages}
+                />
+            </section>
         );
     };
 };

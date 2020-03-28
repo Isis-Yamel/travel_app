@@ -1,0 +1,22 @@
+/* ---- main title layout ---- */
+
+.mainTitle {
+
+    &__layout {
+        align-items: center;
+        display: flex;
+        flex-flow: column;
+        grid-area: mainTitle;
+    }
+
+    &__title {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 6em;
+        margin-bottom: 0;
+        text-transform: uppercase;
+    }
+
+    &__quote {
+        font-style: italic;
+    }
+}
