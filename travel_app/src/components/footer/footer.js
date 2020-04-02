@@ -4,7 +4,7 @@ import '../../css/styles/footer.scss';
 const Footer = () => {
     return (
         <footer className='footer__layout'>
-            <p>All rights reserved</p>
+            <p className='footer__style'>All rights reserved</p>
         </footer>
     );
 };

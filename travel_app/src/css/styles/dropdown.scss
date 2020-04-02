@@ -1,3 +1,5 @@
+@import '../utils/palette.scss';
+
 .dropdown {
     &__container {
 
@@ -7,19 +9,20 @@
             grid-template-columns: repeat(2, 1fr);
             justify-self: center;
             position: relative;
-            width: 80px;
+            width: 120px;
         }
 
         &--style {
-            border-bottom: solid 2px orange;
+            border-bottom: solid 2px $primaryOrange;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 1em;
             font-weight: normal;
             padding: 4px 10px;
-            width: 60px;
+            text-align: center;
+            width: 100px;
 
             &:hover{
-                border-bottom: solid 2px lightseagreen;
+                border-bottom: solid 2px $primaryRed;
             }
         }
 
@@ -38,7 +41,8 @@
             list-style: none;
             padding: 0;
             position: absolute;
-            top: 40px;
+            text-align: center;
+            top: 50px;
             width: 100%;
             z-index: 10;
         }
@@ -46,6 +50,11 @@
         &--item {
             font-size: 0.8em;
             padding: 6px 12px;
+
+            &:hover {
+                background-color: rgba($primaryOrange, 0.4);
+                cursor: pointer;
+            }
         }
     }
 }

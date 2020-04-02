@@ -3,7 +3,6 @@ import Header from '../components/header/header';
 import Main from '../components/main/main';
 import React from 'react';
 import '../css/styles/App.scss';
-import '../css/utils/normalize.css';
 
 const App = () => {
   return (

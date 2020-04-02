@@ -2,6 +2,8 @@
 
 .main {
     &__layout {
+        background: inherit;
+        z-index: 2;
         grid-area: main;
         display: grid;
         grid-template-columns: repeat(2, 50%);
@@ -9,5 +11,20 @@
         grid-template-areas:
             'mainTitle mainTitle'
             'information gallery';
+    }
+    &__test {
+        &:before {
+            display: block;
+            content: '';
+            background: inherit;
+            width: 90%;
+            height: 80%;
+            position: absolute;
+            left: 5%;
+            right: 0;
+            z-index: -1;
+            box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
+            filter: blur(10px);
+        }
     }
 }

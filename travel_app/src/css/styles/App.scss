@@ -1,8 +1,10 @@
 /* ---- app layout ---- */
+@import '../utils/palette.scss';
+
 
 .app{
     &__layout{
-        color: wheat;
+        color: $white;
         display: grid;
         grid-template-columns: 10% 80% 10%;
         grid-template-rows: 10% 85% 5%;
@@ -13,6 +15,7 @@
         height: 100vh;
     }
     &__background {
+        background-attachment: fixed;
         background-image: url(../../assets/background.jpg);
         background-repeat: no-repeat;
         background-size: cover;

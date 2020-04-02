@@ -1,0 +1,15 @@
+/* ---- main info layout ---- */
+
+.mainInformation {
+
+    &__layout {
+        grid-area: information;
+    }
+
+    &__text {
+        &--style {
+            font-family: 'Open Sans', sans-serif;
+            width: 85%;
+        }
+    }
+}
