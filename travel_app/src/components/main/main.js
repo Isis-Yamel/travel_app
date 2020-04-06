@@ -6,7 +6,7 @@ import '../../css/styles/main.scss';
 
 const Main = () => {
     return (
-        <main className='main__layout main__test'>
+        <main className='main__layout main__style'>
             <MainTitle/>
             <MainInformation/>
             <MainGallery/>

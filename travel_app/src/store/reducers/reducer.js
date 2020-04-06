@@ -1,7 +1,16 @@
-import * as actions from '../actions/types';
+import * as types from '../actions/types';
 
 const initialState = {
-  data: []
+  city: 'Bogotá'
 };
 
-export default reducer;
+export default function reducer(state = initialState, actions) {
+  switch (actions.type) {
+    case types.UPDATE_INFO:
+      return( {
+        city: actions.city
+      });
+
+    default: return state;
+  }
+};

@@ -5,7 +5,7 @@ const MainGallery = () => {
     return (
         <div className='mainGallery__layout'>
             <button className='mainGallery__button--style'>
-                <i class="fas fa-images mainGallery__button--icon"></i>
+                <i className="fas fa-images mainGallery__button--icon"></i>
             </button>
         </div>
     );

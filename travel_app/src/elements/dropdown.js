@@ -1,3 +1,4 @@
+import DropdownItems from './dropdownItems';
 import React, { Component, Fragment } from 'react';
 import '../css/styles/dropdown.scss';
 
@@ -7,43 +8,22 @@ class Dropdown extends Component {
         listOpen: false,
     }
 
-    toggleList () {
+    toggleList (event) {
+        event.preventDefault();
         this.setState(prevState => ({
             listOpen: !prevState.listOpen
         }));
     };
 
-    renderIconList () {
-        return (
-            this.state.listOpen
-            ? <i className="fas fa-angle-up dropdown__container--icon"></i>
-            : <i className="fas fa-angle-down dropdown__container--icon"></i>
-        );
-    };
-
-    renderList () {
-        let list;
-
-        if (this.state.listOpen) {
-            list = (
-                <ul className='dropdown__list--style'>
-                    {this.props.list.map((item) => (
-                        <li className='dropdown__list--item' key={item.id} >{item.title}</li>
-                    ))}
-                </ul>
-            );
-        }
-
-        return list;
-    };
-
     render () {
         return (
             <Fragment>
-                <div className='dropdown__container--grid' onClick={() => this.toggleList()}>
+                <div className='dropdown__container--grid' onClick={(event) => this.toggleList(event)}>
                     <h2 className='dropdown__container--style'>{this.props.title}</h2>
-                    {this.renderIconList()}
-                    {this.renderList()}
+                    <DropdownItems
+                        list={this.props.list}
+                        listOpen={this.state.listOpen}
+                    />
                 </div>
             </Fragment>
         );

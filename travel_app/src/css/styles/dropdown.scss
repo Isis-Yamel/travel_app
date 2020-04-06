@@ -13,7 +13,8 @@
         }
 
         &--style {
-            border-bottom: solid 2px $primaryOrange;
+            border-bottom: solid 2px $primaryRed;
+            border-top: solid 2px $primaryRed;
             cursor: pointer;
             font-size: 1em;
             font-weight: normal;
@@ -22,14 +23,14 @@
             width: 100px;
 
             &:hover{
-                border-bottom: solid 2px $primaryRed;
+                background-color: rgba(0, 0, 0, 0.6);
             }
         }
 
         &--icon {
             cursor: pointer;
             position: relative;
-            right: 12px;
+            right: 22px;
             font-size: 14px;
         }
     }
@@ -52,7 +53,7 @@
             padding: 6px 12px;
 
             &:hover {
-                background-color: rgba($primaryOrange, 0.4);
+                background-color: rgba($primaryRed, 0.4);
                 cursor: pointer;
             }
         }
