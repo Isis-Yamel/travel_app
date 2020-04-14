@@ -1,13 +1,14 @@
 import * as types from '../actions/types';
 
 const initialState = {
-  city: 'Bogotá'
+  city: []
 };
 
 export default function reducer(state = initialState, actions) {
   switch (actions.type) {
-    case types.UPDATE_INFO:
+    case types.CHOOSE_CITY:
       return( {
+        ...state.city,
         city: actions.city
       });
 

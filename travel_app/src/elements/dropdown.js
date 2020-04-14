@@ -1,5 +1,6 @@
 import DropdownItems from './dropdownItems';
 import React, { Component, Fragment } from 'react';
+// import { fetchCities } from '../store/actions/actions';
 import '../css/styles/dropdown.scss';
 
 class Dropdown extends Component {
@@ -7,6 +8,10 @@ class Dropdown extends Component {
     state = {
         listOpen: false,
     }
+
+    componentDidMount () {
+        this.props.fetchData();
+    };
 
     toggleList (event) {
         event.preventDefault();

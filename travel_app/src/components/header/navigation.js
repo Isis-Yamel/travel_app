@@ -1,27 +1,12 @@
 import Dropdown from '../../elements/dropdown';
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchCities } from '../../store/actions/actions';
 import '../../css/styles/navigation.scss';
 
 class Navigation extends Component {
 
     state = {
-        cities: [
-            {
-                id: 0,
-                title: 'Berlin',
-                selected: false
-            },
-            {
-                id: 1,
-                title: 'Bogota',
-                selected: false
-            },
-            {
-                id: 2,
-                title: 'Oslo',
-                selected: false
-            }
-        ],
         languages: [
             {
                 id: '1a',
@@ -41,15 +26,24 @@ class Navigation extends Component {
             <section className='navigation__layout--grid'>
                 <Dropdown
                     title='cities'
-                    list={this.state.cities}
+                    list={this.props.data}
+                    fetchData={this.props.fetchCities}
                 />
-                <Dropdown
+                {/* <Dropdown
                     title='lang'
                     list={this.state.languages}
-                />
+                /> */}
             </section>
         );
     };
 };
 
-export default Navigation;
+const mapStateToProps = state => {
+    return {
+        data: state.city
+    };
+};
+
+const mapDispatchToProps = { fetchCities };
+
+export default connect(mapStateToProps, mapDispatchToProps) (Navigation);
