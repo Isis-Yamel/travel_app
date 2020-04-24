@@ -1,13 +1,17 @@
 import React from 'react';
 import '../../css/styles/mainInformation.scss';
 
-const MainInformation = () => {
+const MainInformation = props => {
     return (
         <section className='mainInformation__layout'>
-            <p className='mainInformation__text--style'>Bogotá is Colombia’s sprawling, high-altitude capital. La Candelaria, its cobblestoned center, features colonial-era landmarks like the neoclassical performance hall Teatro Colón and the 17th-century Iglesia de San Francisco. It's also home to popular museums including the Museo Botero, showcasing Fernando Botero's art, and the Museo del Oro, displaying pre-Columbian gold pieces.</p>
+            <p className='mainInformation__text--style scrollbar'>{props.information}</p>
             <p>Read More</p>
         </section>
     );
 };
+
+MainInformation.defaultProps = {
+    information: 'The true delight is in the finding out, rather than in the knowing.'
+}
 
 export default MainInformation;
