@@ -3,13 +3,10 @@
 .main {
     &__layout {
         background: inherit;
-        grid-area: main;
         display: grid;
-        grid-template-columns: repeat(2, 50%);
-        grid-template-rows: 50% 50%;
-        grid-template-areas:
-        'mainTitle mainTitle'
-        'information gallery';
+        height: 100%;
+        position: relative;
+        width: 100%;
         z-index: 2;
     }
     &__style {
@@ -17,11 +14,46 @@
             box-shadow: inset 0 0 0 200px rgba(255,255,255,0.05);
             content: '';
             height: 30%;
-            left: 5%;
             position: absolute;
-            top: 50%;
-            width: 44%;
             z-index: -1;
+        }
+    }
+}
+
+@media (min-width: 300px) {
+    .main {
+        &__layout {
+            grid-template-columns: repeat(2, 50%);
+            grid-template-rows: 30% 60% 10%;
+            grid-template-areas:
+            'mainTitle mainTitle'
+            'information information';
+        }
+        &__style {
+            &:before {
+                left: 1%;
+                top: 40%;
+                width: 96%;
+            }
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .main {
+        &__layout {
+            grid-template-columns: repeat(2, 50%);
+            grid-template-rows: 50% 50%;
+            grid-template-areas:
+            'mainTitle mainTitle'
+            'information information';
+        }
+        &__style {
+            &:before {
+                left: -2%;
+                top: 48%;
+                width: 100%;
+            }
         }
     }
 }

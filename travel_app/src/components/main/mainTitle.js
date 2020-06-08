@@ -11,8 +11,8 @@ const MainTitle = props => {
 };
 
 MainTitle.defaultProps = {
-    title: 'Welcome',
-    subtitle: 'Please choose a city on the menu above'
+    title: 'HI U!',
+    subtitle: 'App of the cities'
 };
 
 export default MainTitle;

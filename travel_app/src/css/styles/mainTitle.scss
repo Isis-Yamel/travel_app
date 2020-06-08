@@ -11,12 +11,27 @@
 
     &__title {
         font-family: 'Montserrat', sans-serif;
-        font-size: 6em;
         margin-bottom: 0;
         text-transform: uppercase;
     }
 
     &__quote {
         font-style: italic;
+    }
+}
+
+@media (min-width: 300px) {
+    .mainTitle {
+        &__title {
+            font-size: 3.5em;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .mainTitle {
+        &__title {
+            font-size: 6em;
+        }
     }
 }

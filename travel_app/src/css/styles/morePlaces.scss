@@ -1,0 +1,41 @@
+/* --- more places layout --- */
+
+.morePlaces {
+    &__layout {
+        display: grid;
+        grid-area: main;
+    }
+}
+
+@media (min-width: 300px) {
+    .morePlaces {
+        &__layout {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: 50% 50%;
+            grid-template-areas:
+            'moreInfo moreInfo'
+            'moreImage moreImage';
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .morePlaces {
+        &__layout {
+            grid-template-columns: repeat(2, 50%);
+            grid-template-rows: 50% 50%;
+            grid-template-areas:
+            'moreInfo moreImage'
+            'moreInfo moreImage';;
+        }
+    }
+}
+
+.moreInformation {
+    grid-area: moreInfo;
+}
+
+.moreImage {
+    grid-area: moreImage;
+    width: 50%;
+}

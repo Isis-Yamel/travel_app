@@ -1,13 +1,12 @@
 /* ---- app layout ---- */
 @import '../utils/palette.scss';
 
-
 .app{
     &__layout{
         color: $white;
         display: grid;
         grid-template-columns: 10% 80% 10%;
-        grid-template-rows: 10% 85% 5%;
+        grid-template-rows: 15% 80% 5%;
         grid-template-areas:
             '. header .'
             '. main .'
@@ -21,4 +20,8 @@
         background-size: cover;
     }
 
+}
+
+.main__layout--content {
+    grid-area: main;
 }

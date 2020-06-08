@@ -10,9 +10,13 @@
             font-family: 'Open Sans', sans-serif;
             height: 30%;
             overflow-y: scroll;
-            width: 85%;
+            width: 96%;
         }
     }
+}
+
+a {
+    color: lightblue;
 }
 
 .scrollbar::-webkit-scrollbar-track {
@@ -21,11 +25,41 @@
 }
 
 .scrollbar::-webkit-scrollbar {
-    width: 3%;
+    width: 2%;
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
     border-radius: 10px;
     box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     background-color: #555;
+}
+
+@media (min-width: 300px) {
+    .mainInformation {
+        &__layout {
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .mainInformation {
+        &__layout {
+            display: initial;
+        }
+    }
+}
+
+@media (min-width: 1080px) {
+    .mainInformation {
+        &__text {
+            &--style {
+                overflow-y: hidden;
+                height: auto;
+            }
+        }
+    }
 }
